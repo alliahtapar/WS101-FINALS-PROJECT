@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b11e3122a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="image/logo.jpg" class="logo">
+            <ul id="sidemenu"> <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#works">MY WORKS</a></li>
+                <li><a href="#contact">MY CONTACT</a></li>
+
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Hi, I'm</p>
+            <h1><span>Alliah Shaine Tapar</span></h1>
+            <p>Web Developer</p>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/shaine.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> I am a motivated, enthusiastic, and diligent web developer with knowledge in HTML and CSS.
+                    I am constantly learning new things and improving my skills since <br> I am aware that technology 
+                    changes from time to time. This allows me to stay up to date with the most recent 
+                    developments in the industry. I have a strong attention to detail and a strong design to keep 
+                    learning new things.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>•
+                                Acknowledges one's obligation to learn.</span></li>
+                            <li><span>•
+                                Ability to drive office communication.</span></li>
+                            <li><span>•
+                                IT team should be built with security as its core.</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>
+                                Dalubhasaan ng Lungsod ng Lucena</span><br>2021-Present</li>
+                            <li><span>St. Augustine School of Nursing</span><br>2019-2021</li>
+                            <li><span>Ransohan Elementary School</span><br> 2008-2015</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="works">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image/resume.jpg">
+                <div class="layer">
+                    <h3>Online Resume</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/responsive.jpg">
+                <div class="layer">
+                    <h3>Responsive Landing</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/calculator.jpg">
+                <div class="layer">
+                    <h3>Simple Calculator</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/addevent.jpg">
+                <div class="layer">
+                    <h3>DOM AddEventListener</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/todolist.jpg">
+                <div class="layer">
+                    <h3>CRUD Todo List</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/colorchanger.jpg">
+                <div class="layer">
+                    <h3>DOM Color Changer</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> taparalliah@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 09491556202</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html>
